@@ -10,7 +10,7 @@ const props = defineProps({
 
 let imageList = props.images
 
-const batchSize = 8
+const batchSize = 10
 const loadedImages = ref([])
 let currentIndex = 0
 const fullscreenImage = ref(null)
@@ -38,7 +38,7 @@ function loadMore() {
 
 function handleScroll() {
   const { scrollTop, scrollHeight, clientHeight } = document.documentElement
-  if (scrollTop + clientHeight >= scrollHeight - 100) {
+  if (scrollTop + clientHeight >= scrollHeight - 600) {
     loadMore()
   }
 }

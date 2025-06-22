@@ -25,9 +25,9 @@ function sortByDate() {
 <template>
   <header>
     <div class="header-column">
-      <p class="logo">my gallery</p>
-      <p class="header-txt" style="padding-left: 10px;">( curated by </p>
-      <a class="header-txt" href="https://x.com/stepanchykov">me</a>
+      <p class="logo">му gаlleгу</p>
+      <p class="header-txt" style="padding-left: 10px; padding-right: 4px;">( сuгаted bу </p>
+      <a class="header-txt" href="https://x.com/stepanchykov"> ме )</a>
       <p class="header-txt"> )</p>
     </div>
     <div class="header-column">
@@ -36,7 +36,7 @@ function sortByDate() {
     <div class="header-column"></div>
     <div class="header-last-column">
       <button @click="shuffleImages">
-        random
+        гandom
       </button>
       <svg width="1" height="20" viewBox="0 0 1 20">
         <rect width="1" height="20" fill="#000000" />
