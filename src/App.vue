@@ -1,47 +1,54 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import HeroSection from './components/HeroSection.vue'
+import GalleryGrid from './components/GalleryGrid.vue'
+import { imageUrls } from './data/images.js'
+import { ref } from 'vue'
+
+const galleryImages = ref([...imageUrls])
+
+function shuffleArray(arr) {
+  return arr
+    .map((value) => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value)
+}
+
+function shuffleImages() {
+  galleryImages.value = shuffleArray([...galleryImages.value])
+}
+
+function sortByDate() {
+  galleryImages.value = [...imageUrls]
+}
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <div class="header-column">
+      <p class="logo">му gаlleгу</p>
+      <p class="header-txt" style="padding-left: 10px; padding-right: 4px;">( сuгаted bу </p>
+      <a class="header-txt" href="https://x.com/stepanchykov"> ме )</a>
+      <p class="header-txt"> )</p>
+    </div>
+    <div class="header-column">
+      <p class="header-txt">{{ imageUrls.length }} items</p>
+    </div>
+    <div class="header-column"></div>
+    <div class="header-last-column">
+      <button @click="shuffleImages">
+        гandom
+      </button>
+      <svg width="1" height="20" viewBox="0 0 1 20">
+        <rect width="1" height="20" fill="#000000" />
+      </svg>
+      <button @click="sortByDate">
+        by date
+      </button>
     </div>
   </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <HeroSection />
+  <GalleryGrid :images="galleryImages" />
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
