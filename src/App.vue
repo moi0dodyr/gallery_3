@@ -3,7 +3,6 @@ import HeroSection from './components/HeroSection.vue'
 import GalleryGrid from './components/GalleryGrid.vue'
 import { imageUrls } from './data/images.js'
 import { ref } from 'vue'
-import { Analytics } from '@vercel/analytics/vue';
 
 const galleryImages = ref([...imageUrls])
 
