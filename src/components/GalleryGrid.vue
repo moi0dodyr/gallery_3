@@ -55,8 +55,8 @@ function layoutMasonry() {
   const grid = document.querySelector('.my-grid')
   if (!grid) return
   const items = Array.from(grid.children)
-  const columnCount = 4
-  const gap = 20
+  const columnCount = window.innerWidth <= 600 ? 2 : 4
+  const gap = window.innerWidth <= 600 ? 8 : 20
 
   const style = window.getComputedStyle(grid)
   const paddingLeft = parseInt(style.paddingLeft, 10)

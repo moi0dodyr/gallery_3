@@ -140,3 +140,34 @@ img {
     line-height: 17px;
     margin: 0;
 }
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .header-column,
+    .header-last-column {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .header-last-column {
+        justify-content: flex-start;
+    }
+    .my-grid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .my-grid > div {
+        width: calc((100% - 20px) / 2);
+    }
+    .hero {
+        height: 60vh;
+    }
+    .hero-img {
+        width: 100%;
+        height: auto;
+    }
+}
