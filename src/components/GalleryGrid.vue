@@ -56,11 +56,11 @@ function layoutMasonry() {
   if (!grid) return
   const items = Array.from(grid.children)
   const columnCount = window.innerWidth <= 600 ? 2 : 4
-  const gap = window.innerWidth <= 600 ? 8 : 20
+  const gap = window.innerWidth <= 600 ? 12 : 20
 
   const style = window.getComputedStyle(grid)
-  const paddingLeft = parseInt(style.paddingLeft, 10)
-  const paddingRight = parseInt(style.paddingRight, 10)
+  const paddingLeft = parseInt(style.paddingLeft, 12)
+  const paddingRight = parseInt(style.paddingRight, 12)
 
   const gridWidth = grid.clientWidth - paddingLeft - paddingRight
   const colWidth = (gridWidth - gap * (columnCount - 1)) / columnCount

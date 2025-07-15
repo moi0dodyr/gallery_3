@@ -27,7 +27,7 @@ function sortByDate() {
 <Analytics />
   <header>
     <div class="header-column">
-      <p class="logo">му gаlleгу</p>
+      <p class="logo">new urgency</p>
       <p class="header-txt" style="padding-left: 10px; padding-right: 4px;">( сuгаted bу </p>
       <a class="header-txt" href="https://x.com/stepanchykov"> ме )</a>
     </div>
