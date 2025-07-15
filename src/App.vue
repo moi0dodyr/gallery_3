@@ -4,6 +4,8 @@ import GalleryGrid from './components/GalleryGrid.vue'
 import { imageUrls } from './data/images.js'
 import { ref } from 'vue'
 import { Analytics } from '@vercel/analytics/vue';
+import IconInstagram from './components/icons/IconInstagram.vue'
+import IconPinterest from './components/icons/IconPinterest.vue'
 
 const galleryImages = ref([...imageUrls])
 
@@ -25,16 +27,37 @@ function sortByDate() {
 
 <template>
 <Analytics />
+
   <header>
     <div class="header-column">
       <p class="logo">new urgency</p>
-      <p class="header-txt" style="padding-left: 10px; padding-right: 4px;">( сuгаted bу </p>
-      <a class="header-txt" href="https://x.com/stepanchykov"> ме )</a>
     </div>
+
     <div class="header-column">
       <p class="header-txt">{{ imageUrls.length }} items</p>
     </div>
-    <div class="header-column"></div>
+
+    <div class="header-column social-links">
+      <a
+        href="https://www.instagram.com/newurgency/"
+        target="_blank"
+        rel="noopener"
+        aria-label="Instagram"
+        class="social-link"
+      >
+        <IconInstagram />
+      </a>
+      <a
+        href="https://pin.it/4PiDWdZWJ"
+        target="_blank"
+        rel="noopener"
+        aria-label="Pinterest"
+        class="social-link"
+      >
+        <IconPinterest />
+      </a>
+    </div>
+
     <div class="header-last-column">
       <button @click="shuffleImages">
         гandom
@@ -50,6 +73,3 @@ function sortByDate() {
   <HeroSection />
   <GalleryGrid :images="galleryImages" />
 </template>
-
-<style scoped>
-</style>

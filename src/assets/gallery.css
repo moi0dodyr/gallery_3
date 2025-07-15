@@ -12,7 +12,7 @@
 }
 
 header {
-    padding: 40px;
+    padding: 20px;
     display: flex;
     justify-content: normal;
     align-items: center;
@@ -23,6 +23,26 @@ header {
     width: 25%;
     display: flex;
     justify-content: normal;
+}
+
+.header-last-column {
+    width: 25%;
+    display: flex;
+    justify-content: end;
+}
+
+.social-links {
+    justify-content: end;
+    gap: 16px;
+}
+
+.social-link {
+    color: white;
+    display: flex;
+}
+.social-link svg {
+    width: 20px;
+    height: 20px;
 }
 
 .logo {
@@ -63,11 +83,6 @@ button {
     cursor: pointer;
 }
 
-.header-last-column {
-    width: 25%;
-    display: flex;
-    justify-content: end;
-}
 
 .my-grid {
     position: relative;
@@ -114,6 +129,7 @@ img {
     flex-direction: column;
     background-color: rgb(0, 0, 0);
     padding-bottom: 40px;
+    padding-top: 20px;
 }
 
 .image-hero {
@@ -154,6 +170,9 @@ img {
         margin-bottom: 12px;
     }
     .header-last-column {
+        justify-content: flex-start;
+    }
+     .social-links {
         justify-content: flex-start;
     }
     .my-grid {
