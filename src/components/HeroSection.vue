@@ -2,7 +2,7 @@
 import { imageUrls } from '../data/images.js'
 
 // use a specific image as hero (index 64 -> 0065.jpg) if available
-const heroImage = imageUrls[12] || imageUrls[0]
+const heroImage = imageUrls[1] || imageUrls[0]
 </script>
 
 <template>
