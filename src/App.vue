@@ -4,6 +4,7 @@ import GalleryGrid from './components/GalleryGrid.vue'
 import { imageUrls } from './data/images.js'
 import { ref } from 'vue'
 import { Analytics } from '@vercel/analytics/vue';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import IconInstagram from './components/icons/IconInstagram.vue'
 import IconPinterest from './components/icons/IconPinterest.vue'
 
