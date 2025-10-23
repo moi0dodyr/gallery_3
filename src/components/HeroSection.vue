@@ -1,7 +1,7 @@
 <script setup>
 import { imageUrls } from '../data/images.js'
 
-const heroImage = imageUrls[9] || imageUrls[0]
+const heroImage = imageUrls[4] || imageUrls[0]
 </script>
 
 <template>
